@@ -8,7 +8,6 @@ class CrudController extends \BaseController
 		$books = Book::orderBy('id','desc')->paginate(5);
 		return View::make('dashboard.tampildata')->with('booksdata', $books);
 	}
-	
 	public function tambahdata()
 	{
 		return View::make('dashboard.tambahdata');
