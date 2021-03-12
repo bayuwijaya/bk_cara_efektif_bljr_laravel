@@ -17,6 +17,7 @@ return array(
     'Boris\\Inspector' => $vendorDir . '/d11wtq/boris/lib/Boris/Inspector.php',
     'Boris\\ReadlineClient' => $vendorDir . '/d11wtq/boris/lib/Boris/ReadlineClient.php',
     'Boris\\ShallowParser' => $vendorDir . '/d11wtq/boris/lib/Boris/ShallowParser.php',
+    'BuatTabelBuku' => $baseDir . '/app/database/migrations/2021_03_12_091321_buat_tabel_buku.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\CarbonPeriod' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',

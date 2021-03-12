@@ -234,6 +234,7 @@ class ComposerStaticInitd1f11bd8028d97c7ceb84010ba0c58d1
         'Boris\\Inspector' => __DIR__ . '/..' . '/d11wtq/boris/lib/Boris/Inspector.php',
         'Boris\\ReadlineClient' => __DIR__ . '/..' . '/d11wtq/boris/lib/Boris/ReadlineClient.php',
         'Boris\\ShallowParser' => __DIR__ . '/..' . '/d11wtq/boris/lib/Boris/ShallowParser.php',
+        'BuatTabelBuku' => __DIR__ . '/../..' . '/app/database/migrations/2021_03_12_091321_buat_tabel_buku.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
