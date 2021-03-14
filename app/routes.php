@@ -18,5 +18,19 @@ Route::get('/', function()
 
 Route::get('coffe', function()
 {
-	return View::make('kopi');
+	return View::make('hello');
 });
+
+/*
+	Laravel menyediakan beberapa jenis metode request HTTP yang lebih tepat. 
+	Beberapa methode request HTTP yang populer digunakan dalam aplikasi web saat ini adalah :
+
+	GET
+	POST
+	DELETE
+	PUT
+	PATCH
+	TRACE
+	HEAD
+	
+*/
