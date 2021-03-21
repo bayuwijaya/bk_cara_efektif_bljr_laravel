@@ -88,3 +88,19 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*	Pembuatan Custom Filter	*/
+Route::filter('checksize', function() 
+{
+	$size = Request::segment(3);
+	if($size < 12 || $size > 24) {
+		return 'Ukuran yang diperbolehkan adalah 12 s/d 24';
+	}
+});
+
+Route::filter('human_life_zone', function($route, $request, $age) 
+{
+    if ($age <= 25 || $age >= 60) {
+        return 'Usia Anda adalah : '.$age.', Maaf !!! Usia Anda tidak Layak Kerja';
+    }
+});
