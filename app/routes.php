@@ -140,8 +140,51 @@ Route::get('passingdataview', function() {
 	return View::make('bab_4.native_page');
 });
 
-// Menggunakan View::make
+// Menggunakan View::make()
 Route::get('common-pass-data', function() {
 	$data = array('currentDateTime' => date('Y-m-d H:i:s'));
 	return View::make('bab_4.login_common_passing_data', $data);
+});
+
+// Menggunakan with()
+Route::get('using-with', function() {
+	$date = date('Y-m-d');
+	$time = date('H:i:s');
+	return View::make('bab_4.login_using_method_with')->with('tanggal', $date)->with('waktu', $time);
+});
+
+/* Blade Template Engine 
+	A)	Common View (.php)				  		Blade Views (.blade.php)
+			<?php echo(date('Y')); ?>				{{ date('Y') }}
+	B) 	Looping data menggunakan PHP			Looping data menggunakan Blade
+			<?php foreach($users as $user) { ?>		@foreach($users as $user)
+			<p>										<p>
+			<?php echo($user->name); ?> <br />		{{ $user->name }} <br />
+			<?php echo($user->address); ?>			{{ $user->address }}
+			</p>									</p>
+	C)	Pernyataan kondisional dengan PHP 		Pernyataan kondisional dengan Blade
+			<?php if($category == 'blog') { ?>		@if($category == 'blog')
+			...										...
+			<?php } else { ?>						@else
+			...										...
+			<?php } ?>								@endif
+*/
+
+// Output Data and Escapping Data
+Route::get('output-escapping-data', function() {
+	$name = 'John';
+	return View::make('bab_4.output_using_blade')->with('name', $name);	
+});
+
+// Conditional Statement di Views dengan PHP biasa
+Route::get('conditional-statement-native', function() {
+	$currentTime = date('a');
+	return View::make('bab_4.conditional_statement_native')->with('timeOfDay', $currentTime);
+});
+
+// Conditional Statement di Views dengan Blade Engine
+Route::get('conditional-statement-blade', function() {
+	// Get the current time of day, 'am' or 'pm'
+	$waktuSkrg = date('a');
+	return View::make('bab_4.conditional_statement_blade')->with('janiWaktu', $waktuSkrg);
 });
