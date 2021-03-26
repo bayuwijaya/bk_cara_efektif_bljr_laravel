@@ -12,6 +12,8 @@
 */
 
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\View;
+use Illuminate\View\View as ViewView;
 
 Route::get('/', function() {
 	return View::make('hello');
@@ -187,4 +189,47 @@ Route::get('conditional-statement-blade', function() {
 	// Get the current time of day, 'am' or 'pm'
 	$waktuSkrg = date('a');
 	return View::make('bab_4.conditional_statement_blade')->with('janiWaktu', $waktuSkrg);
+});
+
+Route::get('count-records-using-blade', function() {
+	$jurusan = array('Teknik Sipil', 'Teknik Mesin', 'Teknik Elektro', 'Teknologi Informasi');
+	return View::make('bab_4.count_records_using_blade')->with('departemen', $jurusan);
+});
+
+Route::get('conditional-statement-unless', function() {
+	$client = array('Agus Mahardika', 'Ari Saputra', 'Edy Erawan', 'Awin Surya', 'Yogi Swanjaya');
+	return View::make('bab_4.conditional_statement_unless')->with('user', $client);
+});
+
+/* Looping Statement di Views dengan Blade Engine	*/
+// foreach(array_or_object as $value)
+Route::get('looping-foreach-asvalue', function() {
+	$pengguna = array('User 1', 'User 2', 'User 3', 'User 4');
+	return View::make('bab_4.looping_foreach_asvalue')->with('users', $pengguna);
+}); 
+
+// foreach(array_or_object as $key => $value)
+Route::get('looping-foreach-askey-value', function() {
+	$mahasiswa = array("Peter" => 35,
+					   "Ben"   => 37,
+					   "Joe"   => 43);
+	return View::make('bab_4.looping_foreach_askey_value')->with('student', $mahasiswa);
+});
+
+// for(expression1, expression2, expression3)
+Route::get('looping-for', function() {
+	return View::make('bab_4.looping_for');	
+});
+
+// while(expression)
+Route::get('looping-while', function() {
+	return View::make('bab_4.looping_while');
+});
+
+Route::get('looping-forelse', function() {
+	$karyawan = array("Pipit Candra" 	=> "Bidan",
+					  "Ema Rindayani" 	=> "Risk Management",
+					  "Silvi Ariani"  	=> "Balinese Chef", 
+					  "Ayu Yuniantari"	=> "Perawat");
+	return View::make('bab_4.looping_forelse')->with('employees', $karyawan);
 });
