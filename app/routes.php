@@ -233,3 +233,8 @@ Route::get('looping-forelse', function() {
 					  "Ayu Yuniantari"	=> "Perawat");
 	return View::make('bab_4.looping_forelse')->with('employees', $karyawan);
 });
+
+/* Blade Layout di Views dengan Blade Engine	*/
+Route::get('Blade-layout-template', function() {
+	return View::make('bab_4.blade_layout.layouts.default');
+});
