@@ -235,6 +235,6 @@ Route::get('looping-forelse', function() {
 });
 
 /* Blade Layout di Views dengan Blade Engine	*/
-Route::get('Blade-layout-template', function() {
-	return View::make('bab_4.blade_layout.layouts.default');
+Route::get('blade-layout-template', function() {
+	return View::make('bab_4.blade_layout.pages.home');
 });
