@@ -12,11 +12,6 @@
       @include('bab_4.blade_layout.includes.header')
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-      @include('bab_4.blade_layout.includes.section_hero')
-  </section><!-- End Hero -->
-
   <main id="main">
       @yield('content')
   </main><!-- End #main -->

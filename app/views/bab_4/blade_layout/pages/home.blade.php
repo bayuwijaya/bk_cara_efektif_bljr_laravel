@@ -1,6 +1,12 @@
 @extends('bab_4.blade_layout.layouts.default')
 
 @section('content')
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        @include('bab_4.blade_layout.includes.section_hero')
+    </section><!-- End Hero -->
+
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
       <div class="container">
