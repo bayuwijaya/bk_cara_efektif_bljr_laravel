@@ -246,3 +246,7 @@ Route::get('blade-layout-portodetails', function() {
 Route::get('blade-layout-innerpage', function() {
 	return View::make('bab_4.blade_layout.pages.inner_page');
 });
+
+/*	Bab 5	*/
+// Default Controller Laravel
+Route::get('default-controller', 'HomeController@showWelcome');
