@@ -250,3 +250,9 @@ Route::get('blade-layout-innerpage', function() {
 /*	Bab 5	*/
 // Default Controller Laravel
 Route::get('default-controller', 'HomeController@showWelcome');
+
+// Controller Aplikasi Simple Login 
+Route::get('login-use-controller', 'LoginController@showLogin');
+Route::post('login-use-controller', 'LoginController@processLogin');
+
+// Controller Aplikasi Simple Counting
