@@ -256,3 +256,8 @@ Route::get('login-use-controller', 'LoginController@showLogin');
 Route::post('login-use-controller', 'LoginController@processLogin');
 
 // Controller Aplikasi Simple Counting
+Route::get('/calculator', 'HitungController@menuHitung');
+Route::get('calculator-tambah', 'HitungController@viewTambah');
+Route::post('calculator-tambah', 'HitungController@processTambah');
+Route::get('calculator-kali', 'HitungController@viewKali');
+Route::post('calculator-kali', 'HitungController@processKali');
