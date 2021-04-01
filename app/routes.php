@@ -266,3 +266,5 @@ Route::post('calculator-kali', 'HitungController@processKali');
 Route::get('profile', array('before'=>'auth', 'uses'=>'UserController@showProfile'));
 
 /* Bekerja dengan Form */
+// Penanganan Form di Laravel
+Route::get('basic_form', 'BasicFormController@viewBasicForm');
