@@ -261,3 +261,8 @@ Route::get('calculator-tambah', 'HitungController@viewTambah');
 Route::post('calculator-tambah', 'HitungController@processTambah');
 Route::get('calculator-kali', 'HitungController@viewKali');
 Route::post('calculator-kali', 'HitungController@processKali');
+ 
+// Filter Controller
+Route::get('profile', array('before'=>'auth', 'uses'=>'UserController@showProfile'));
+
+/* Bekerja dengan Form */
