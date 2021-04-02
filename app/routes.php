@@ -249,10 +249,10 @@ Route::get('blade-layout-innerpage', function() {
 
 /*	Bab 5	*/
 // Default Controller Laravel
-Route::get('default-controller', 'HomeController@showWelcome');
+Route::get('default-controller', array('as'=>'default.controller', 'uses'=>'HomeController@showWelcome'));
 
 // Controller Aplikasi Simple Login 
-Route::get('login-use-controller', 'LoginController@showLogin');
+Route::get('login-use-controller', array('as'=>'login.showLogin', 'uses'=>'LoginController@showLogin'));
 Route::post('login-use-controller', 'LoginController@processLogin');
 
 // Controller Aplikasi Simple Counting
@@ -265,6 +265,6 @@ Route::post('calculator-kali', 'HitungController@processKali');
 // Filter Controller
 Route::get('profile', array('before'=>'auth', 'uses'=>'UserController@showProfile'));
 
-/* Bekerja dengan Form */
+/*	Bab 6	*/
 // Penanganan Form di Laravel
 Route::get('basic_form', 'BasicFormController@viewBasicForm');
