@@ -21,8 +21,25 @@
         {{ Form::close() }}
         <br />
         <!-- Mengarahkan Form ke Controller -->
-        {{ Form::open(array('action'=>'BookController@save')) }}
+        {{ Form::open(array('action'=>'HomeController@showWelcome')) }}
             <input type="submit" value="Mengarahkan ke Controller" />
+        {{ Form::close() }}
+        <br />
+        <!-- Menggunakan Method yang Berbeda -->
+        {{ Form::open(array('method'=>'GET', 'url'=>'http://www.laravel.com/form')) }}
+            <input type="submit" value="Method GET" />
+        {{ Form::close() }}
+        <br />
+        {{ Form::open(array('method'=>'PUT', 'url'=>'http://www.laravel.com/form')) }}
+            <input type="submit" value="Method PUT" />
+        {{ Form::close() }}
+        <br />
+        {{ Form::open(array('method'=>'PATCH', 'url'=>'http://www.laravel.com/form')) }}
+            <input type="submit" value="Method PATCH" />
+        {{ Form::close() }}
+        <br />
+        {{ Form::open(array('method'=>'DELETE', 'url'=>'http://www.laravel.com/form')) }}
+            <input type="submit" value="Method DELETE" />
         {{ Form::close() }}
     </body>
 </html>
