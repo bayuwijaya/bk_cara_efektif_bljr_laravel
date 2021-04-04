@@ -41,5 +41,21 @@
         {{ Form::open(array('method'=>'DELETE', 'url'=>'http://www.laravel.com/form')) }}
             <input type="submit" value="Method DELETE" />
         {{ Form::close() }}
+        <br />
+        <!-- Menggunakan Atribute CSS -->
+        {{ Form::open(array('class'=>'container')) }}
+            <input type="submit" value="Atribut CSS Class" />
+        {{ Form::close() }}    
+        <br />
+        {{ Form::open(array('id'=>'container')) }}
+            <input type="submit" value="Atribut CSS ID" />
+        {{ Form::close() }}
+        <br />
+        {{ Form::open(array('method'=>'GET', 'route'=>'login.showLogin', 'class'=>'form-control')) }}
+            <input type="submit" value="Multiple Atribut" />
+        {{ Form::close() }}
+        <br />
+        <!-- Form Binding ke Model -->
+        {{ Form::model($data, array('route'=>'update', $item->id)) }}
     </body>
 </html>
